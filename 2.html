@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #mouseTracker {
+      width: 100vw;
+      height: 100vh;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="mouseTracker" onmousemove="trackMouse(event)" onclick="handleClick(event)"></div>
+
+<script>
+  function trackMouse(event) {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+
+    document.getElementById('mouseTracker').innerText = `Mouse Coordinates: X: ${mouseX}, Y: ${mouseY}`;
+  }
+
+  function handleClick(event) {
+    const mouseButton = event.button === 0 ? 'Left' : (event.button === 2 ? 'Right' : 'Unknown');
+
+    alert(`Mouse Button Clicked: ${mouseButton}`);
+  }
+</script>
+
+</body>
+</html>

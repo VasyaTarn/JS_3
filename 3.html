@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3</title>
+</head>
+<body>
+
+<button onclick="toggleText()">Toggle Text</button>
+<p id="displayText">Text</p>
+
+<script>
+  function toggleText() {
+    const displayTextElement = document.getElementById('displayText');
+    
+    if (displayTextElement.style.display === 'none' || displayTextElement.style.display === '') {
+      displayTextElement.style.display = 'block'; 
+    } else {
+      displayTextElement.style.display = 'none'; 
+    }
+  }
+</script>
+
+</body>
+</html>
